@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jeu du Moulin - IA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jeu du Moulin" />
+    <meta name="author" content="TUAL Maxime" />
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+		body {
+		    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+		}
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/jeudumoulin/">Jeu du Moulin - IA</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="/jeudumoulin/">Jouer</a></li>
+              <li><a href="/jeudumoulin/about.html">About</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <h1>Jeu Du Moulin</h1>
+     
+      <section id="section_gamebox">
+
+      		<section id="section_plateau">
+            <div id="s_0_0" class="sommet"></div>
+            <div id="s_0_1" class="sommet"></div>
+            <div id="s_0_2" class="sommet"></div>
+            <div id="s_0_3" class="sommet"></div>
+            <div id="s_0_4" class="sommet"></div>
+            <div id="s_0_5" class="sommet"></div>
+            <div id="s_0_6" class="sommet"></div>
+            <div id="s_0_7" class="sommet"></div>
+
+            <div id="s_1_0" class="sommet"></div>
+            <div id="s_1_1" class="sommet"></div>
+            <div id="s_1_2" class="sommet"></div>
+            <div id="s_1_3" class="sommet"></div>
+            <div id="s_1_4" class="sommet"></div>
+            <div id="s_1_5" class="sommet"></div>
+            <div id="s_1_6" class="sommet"></div>
+            <div id="s_1_7" class="sommet"></div>
+
+            <div id="s_2_0" class="sommet"></div>
+            <div id="s_2_1" class="sommet"></div>
+            <div id="s_2_2" class="sommet"></div>
+            <div id="s_2_3" class="sommet"></div>
+            <div id="s_2_4" class="sommet"></div>
+            <div id="s_2_5" class="sommet"></div>
+            <div id="s_2_6" class="sommet"></div>
+            <div id="s_2_7" class="sommet"></div>
+      		</section>
+
+
+      		<section id="section_infos">
+
+            <div id="div_end_game"></div>
+          
+            <label for="opponent">Adversaire:</label>
+            <select id="opponent">
+              <option value="ia">Ordinateur</option>
+              <option value="human">Humain</option>
+              <option value="iavsia">IA vs IA</option>
+            </select>
+
+            <label for="name_j1">Nom Joueur 1:</label>
+            <input type="text" id="name_j1" />
+            <select id="lvl_ia_j1" style="display:none;">
+              <option value="0">Boris (Niveau 0)</option>
+              <option value="1">Jarvis (Niveau 1)</option>
+            </select>
+
+            <label for="name_j1">Nom Joueur 2:</label>
+            <select id="lvl_ia">
+              <option value="0">Boris (Niveau 0)</option>
+              <option value="1">Jarvis (Niveau 1)</option>
+            </select>
+            <input type="text" id="name_j2" style="display:none;" />
+
+            <label id="label_time_ia_think" for="time_ia_think" style="display:none;">Temps (s) entre chaque coup:</label>
+            <select id="time_ia_think" style="display:none;">
+              <option value="500">0.5 s</option>
+              <option value="1000">1 s</option>
+              <option value="2000">2 s</option>
+              <option value="5000">5 s</option>
+            </select>
+
+            <button class="btn btn-primary" id="play_restart_button">Jouer</button>
+
+            <span class="span_notification" id="notif">Cliquer sur le bouton "Jouer" pour commencer.</span>
+
+            <span class="span_infos_phase" id="notifPhase"></span>
+            
+      		</section>
+      </section>
+
+    </div>
+
+    <!-- Le javascript -->
+    <script data-main="js/client" src="js/lib/require-jquery.js"></script>    
+    <script src="js/lib/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
+
+
+	

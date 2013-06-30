@@ -1,0 +1,116 @@
+html, body {
+	margin: 0px;
+}
+
+h1 {
+	text-align: center;
+}
+
+#container {
+	margin: auto;
+}
+
+#section_gamebox {
+	width: 1076px;
+	margin: auto;
+}
+
+#section_plateau {
+	width: 770px;
+	height: 776px;
+	background-image: url('../img/plateau.png');
+	float: left;
+	position: absolute;
+}
+
+#section_infos {
+	width: 250px;
+	height: 720px;
+	float: left;
+	padding: 39px 19px 14px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin-left: 770px;
+	
+}
+
+.gras {
+	font-weight: bold;
+}
+
+label {
+	font-weight: bold;
+}
+
+.span_notification {
+	margin-top: 30px;
+	margin-left: 15px !important;
+	width: 100%;
+}
+
+.span_infos_phase
+{
+	margin-left: 15px !important;
+	width: 100%;
+}
+
+.sommet {
+	width: 70px;
+	height: 70px;
+	/*background-color: blue;*/
+	position: absolute;
+}
+
+/* Position sommets */
+#s_0_0 { top: 63px; left: 63px; }
+#s_0_1 { top: 63px; left: 357px; }
+#s_0_2 { top: 63px; left: 651px; }
+#s_0_3 { top: 357px; left: 651px; }
+#s_0_4 { top: 651px; left: 651px; }
+#s_0_5 { top: 651px; left: 357px; }
+#s_0_6{ top: 651px; left: 63px; }
+#s_0_7 { top: 357px; left: 63px; }
+
+#s_1_0 {top: 160px; left: 160px; }
+#s_1_1 { top: 160px; left: 355px; }
+#s_1_2 { top: 160px; left: 550px; }
+#s_1_3 { top: 355px; left: 550px; }
+#s_1_4 { top: 551px; left: 550px; }
+#s_1_5 { top: 551px; left: 357px; }
+#s_1_6{ top: 551px; left: 160px; }
+#s_1_7 { top: 355px; left: 160px; }
+
+#s_2_0 { top: 259px; left: 258px; }
+#s_2_1 { top: 259px; left: 356px; }
+#s_2_2 { top: 259px; left: 454px; }
+#s_2_3 { top: 355px; left: 454px; }
+#s_2_4 { top: 454px; left: 454px; }
+#s_2_5 { top: 454px; left: 356px; }
+#s_2_6{ top: 454px; left: 259px; }
+#s_2_7 { top: 355px; left: 258px; }
+
+.blancP {
+	background-image: url("../img/whitePiece.png");
+}
+
+.noirP {
+	background-image: url("../img/blackPiece.png");
+}
+
+#div_end_game {
+	position: fixed;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    text-align:center;
+    display: none;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 300px;
+}

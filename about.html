@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Jeu du Moulin - IA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jeu du Moulin" />
+    <meta name="author" content="TUAL Maxime" />
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+    body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+      <![endif]-->
+
+      <!-- Fav and touch icons -->
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+      <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="/jeudumoulin/">Jeu du Moulin - IA</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li><a href="/jeudumoulin/">Jouer</a></li>
+                        <li class="active"><a href="/jeudumoulin/about.html">About</a></li>
+                  </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h1>About</h1>
+
+        <h3>Présentation</h3>
+        <p>
+            Ce Jeu a été crée dans le cadre du mini-projet de la matière 4AIT (Artificial Intelligence).
+        </p>
+        <p>
+            Créateur:<br />
+            <ul>
+                <li>TUAL Maxime, site principal : <a href="http://maxime.tual.free.fr">http://maxime.tual.free.fr</a></li>
+            </ul>
+        </p>
+
+        <h3>Comment jouer ?</h3>
+        <p>
+
+            <h4>Règles du jeu:</h4>
+
+            Le jeu se déroule en deux temps : la pose puis le mouvement. <br />
+            <span class="gras">La pose</span> <br/>
+            Tant qu'il en possède encore, chaque joueur place à tour de rôle un pion sur une intersection libre. (9 Pions par joueurs) <br />
+            <span class="gras">Le mouvement </span> <br/>
+            Lorsqu'il n'a plus de pion à poser, chaque joueur fait glisser l'un de ses pions vers une intersection voisine libre en suivant un chemin prévu. <br /><br />
+
+            À tout moment du jeu, celui qui réalise un moulin — c'est-à-dire l'alignement de trois de ses pions — peut capturer un pion adverse. Ce pion doit être choisi parmi ceux n'appartenant pas à un moulin, s'il en existe, mais peut être quelconque dans le cas contraire.
+            Le jeu s'achève quand un joueur n'a plus que deux pions ou ne peut plus jouer, il est alors le perdant.
+
+
+            <span class="gras">Sources: <a href="http://fr.wikipedia.org/wiki/Jeu_du_moulin" target="_blank">Wikipédia</a></span>
+
+            <h4>Manipulation</h4>
+
+            Phase 1: Lorsque c'est à votre tour, cliquez sur un noeud afin de poser votre pion à cette endroit. <br />
+
+            Phase 2: Lorsque c'est à votre tour, cliquez sur un pion qui vous appartient (il deviendra rouge), cliquer ensuite sur l'endroit où vous souhaitez le déplacer. <br />
+            Si vous avez sélectionné un mauvais pion vous pouvez recliquer sur le pion déjà séletionné pour le désélectionner.<br /><br />
+
+        </p>
+
+        <h3>Pour les développeurs</h3>
+        <p>
+            J'ai créer mon application de manière à ce que l'intégration d'une nouvelle IA soit
+            facilement modulable. <br/>
+            <br />
+            Vous trouverez donc ci-dessous les liens permettant de télécharger mon projet (et de créer votre propre IA): <br/>
+            <ul>
+                <li>
+                    Téléchargement projet: <a href="/archives/JeuDuMoulin_TUAL_Maxime.rar">Archive du projet</a>
+                </li>
+                <li>
+                    <a href="/js/brains/brainTemplate.js" target="_blank">brainTemplate.js</a>
+                     / <a href="/js/brains/boris.js" target="_blank">boris.js</a> (Template + Exemple)
+                </li>
+            </ul>
+            Procédure d'ajout d'IA: <br />
+            <ol>
+                <li>Créer son propre "Brain" et le mettre dans le dossier "brains". (voir brainTemplate.js)</li>
+                <li>
+                    Dans le fichier IA.js: modifier le premier switch dans "initialization" afin d'ajouter le case de votre IA: <br />
+                    <img src="img/switch.png" alt="captureExample" /> <br />
+                    Ajouter dans la première ligne (define) votre fichier JS. <br />
+                    <img src="img/defineJS.png" alt="captureExample" /> <br />
+                </li>
+                <li>Dans le fichier index.html ajouter à l'élément html permettant de sélectionner le niveau de l'IA votre propre IA: <br />
+                <img src="img/iaSelect.png" alt="captureExample" /> <br />
+                </li>
+            </ol>
+
+            Pour toute explications, demandes, n'hésitez pas à me contacter par mail:
+            <a href="mail:maxime.tual@supinfo.com">maxime.tual AT supinfo.com</a>
+        </p>
+
+        <p>Ressources graphiques prises sur ce site : "<a href="http://gilbert.gastebois.pagesperso-orange.fr/java/moulin/moulin.htm" target="_blank">Jeu du moulin en ligne</a>"</p>
+
+    </div>
+
+    <!-- Le javascript -->
+    <script data-main="js/client" src="js/lib/require-jquery.js"></script>    
+    <script src="js/lib/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+
